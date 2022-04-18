@@ -1,0 +1,6 @@
+SELECT m.GroupID, FirstName, LastName, Job,ExternalID, CompanyName,Count(*) as Count
+FROM maintable_VWYI2 m 
+JOIN  cb_vendorinformation c ON m.GroupID = C.GroupID 
+GROUP BY m.FirstName
+ORDER By Count, c.CompanyName  ;
+
